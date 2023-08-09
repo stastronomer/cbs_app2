@@ -1,3 +1,5 @@
+## Basic home control setup
+
 1. Requirements and run:
 
     Install requirements using: pip install -r requirements.txt
