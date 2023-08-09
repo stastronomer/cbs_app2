@@ -3,9 +3,10 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CBS App</title>
     <title>Reading from Sensors</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
@@ -13,8 +14,9 @@
 </head>
 <body class="bg-info text-black">
     <div class="text-center">
-        <h1 class="mt-5">The readings for your home control setup</h1>
+        <h1 class="mt-5">Live readings from {{x['user']}} home control setup</h1>
     </div>
+    
     <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
         <tr>
           <th></th>>
@@ -41,7 +43,8 @@
           <td>{{x['g_hum']}}%</td>
         </tr>
       </table>
-    
+      <div class="text-center"><button class="text-center" onClick="window.location.reload();">Refresh Page</button></div>
+      <div class="text-center">(page automatically refreshes every 30 seconds.)</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
     crossorigin="anonymous"></script>

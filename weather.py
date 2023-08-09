@@ -1,11 +1,12 @@
+#import modules
 import requests
 from dotenv import load_dotenv
 import os
 from dataclasses import dataclass
 
 
-load_dotenv()
-api_key = os.getenv('API_KEY')
+load_dotenv() #load environment variables, API key here
+api_key = os.getenv('API_KEY') #fetch API key for weather 
 
 
 @dataclass
@@ -17,7 +18,7 @@ class WeatherData:
     humidity: float
 
 def get_lat_lon(city_name, state_code, country_code, API_key):
-
+    ''' Fetches longitude and latitude of the city using a Geocoding API call'''
     url = f"http://api.openweathermap.org/geo/1.0/direct?q={city_name},{state_code},{country_code}&&appid={API_key}"
     resp = requests.get(url).json()
     data = resp[0]
@@ -26,6 +27,7 @@ def get_lat_lon(city_name, state_code, country_code, API_key):
 
 
 def get_current_weather(lat, lon, API_key):
+    '''Makes an API call to fetch weather details and saves the required information'''
     url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_key}&units=metric"
     resp = requests.get(url).json()
     #main = resp.get('weather')[0].get('main')
@@ -41,9 +43,8 @@ def get_current_weather(lat, lon, API_key):
 def main(city_name, state_name, country_name):
     lat, lon = get_lat_lon(city_name, state_name, country_name, api_key)
     weather_data = get_current_weather(lat, lon, api_key)
-    print(weather_data)
     return weather_data
 
 if __name__ == "__main__":
     lat, lon = get_lat_lon('Miami', '', '', api_key)
-    print(get_current_weather(lat, lon, api_key))
+    print(get_current_weather(lat, lon, api_key)) #sanity check

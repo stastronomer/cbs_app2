@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBS App</title>
+    <title>Reading from Sensors</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+    crossorigin="anonymous">
+</head>
+<body class="bg-info text-black">
+    <div class="text-center">
+        <h1 class="mt-5">Select the User to display</h1>
+        <form action="/button1" method="post">
+            <div class="button-container"><button type="submit">User 1</button></div>
+        </form>
+        <form action="/button2" method="post">
+            <div class="button-container"><button type="submit">User 2</button></div>
+        </form>
+        <form action="/button3" method="post">
+            <div class="button-container"><button type="submit">User 3</button></div>
+        </form>
+    </div>
+    
+</body>
+</html>
