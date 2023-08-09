@@ -1,12 +1,11 @@
-To run:
-1. Requirements:
+1. Requirements and run:
     Install requirements using: pip install -r requirements.txt
     Directly run from terminal: python app.py
 
 2. weather.py: 
     Makes an API call to OpenWeatherMap to fetch the weather of a given city. Only the values of temperature, humidity, and pressure are stored.
 
-3. app.py: 
+3. Functionality: 
     The basic idea is to simulate readings of a sensor that keeps fluctuating because the immediate surroundings of a sensor, especially home sensors, might get affected even by opening windows.
 
     Simulating sensors basic idea: 
