@@ -1,5 +1,7 @@
 1. Requirements and run:
+
     Install requirements using: pip install -r requirements.txt
+    
     Directly run from terminal: python app.py
 
 2. weather.py: 
