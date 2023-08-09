@@ -1,3 +1,5 @@
+## Basic home control setup
+
 1. Requirements and run:
 
     Install requirements using: pip install -r requirements.txt
@@ -10,12 +12,12 @@
 
 3. Functionality:
 
-    The basic idea is to simulate readings of a sensor that keeps fluctuating because the immediate surroundings of a sensor, especially home sensors, might get affected even by opening windows.
+    The basic idea is to simulate readings of a sensor that keeps fluctuating because the immediate surroundings of a sensor, especially home sensors, might get affected by minor events     like opening windows.
 
 
     Simulating sensors basic idea: 
 
-    To do this, the program gets information on temperature, pressure, and humidity from OpenWeatherMap (https://openweathermap.org/). Now, to add fluctuations of a sensor, a random number generator is being used, which adds a 10% randomness value to the original values of parameters. Finally, a Flask instance is used as a back-end to display the dashboard to client in form of a web app.
+    To do this, the program gets information on temperature, pressure, and humidity from OpenWeatherMap (https://openweathermap.org/). Now, to add fluctuations of a sensor, a random number generator is being used, which adds a 10% randomness to the original values of parameters. Finally, a Flask instance is used as a back-end to display the dashboard to client in form of a web app.
 
 
     Multiple users:
@@ -30,4 +32,4 @@
 
 4. UI:
 
-    The homepage of (a very basic) UI asks you to choose your User ID and takes you to your dashboard where you can see the readings from your setup. The page automatically refreshes every 30 seconds to update readings and it also be refreshed manually optionally.
+    The homepage of (a basic) UI asks you to choose your User ID and takes you to your dashboard where you can see the readings from your setup. The page automatically refreshes every 30 seconds to update readings and it can also be refreshed manually.
